@@ -10,7 +10,7 @@ The Stux.Digital "launching soon" placeholder page, live at [soonpage.stux.digit
 a Stux.Digital website or service that hasn't launched yet.
 
 It's one of the Stux.Group placeholder pages, in Stux.Digital's two-tone sky blue (`#38bdf8` on
-dark, `#0369a1` on light, straight from the logo), with Stux.Digital's own twist: the page sits inside a browser window whose address bar shows the domain it's served on, with Idea → Design → Build → Online progress steps (Build in progress),
+dark, `#0369a1` on light, straight from the logo), with Stux.Digital's own twist: the page sits inside a browser window whose address bar shows the domain it's served on, with Idea → Design → Build → Host → Online progress steps (Build in progress),
 and the logo's winding path runs behind the page to a lightbulb.
 
 - One static `index.html` plus its legal, changelog, sitemap and 404 pages: no framework, no build step
