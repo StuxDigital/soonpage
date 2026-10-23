@@ -42,10 +42,14 @@ projects); see [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Releasing
 
 1. Update `CHANGELOG.md`
-2. Bump `VERSION.md`
+2. Set `VERSION.md` to today's UTC date (`YY.MM.DD`)
 3. Update this README if relevant
-4. Run `./commit.sh` (or `commit.bat`): it reads `VERSION.md`, commits, and tags `vX.Y.Z`
+4. Run `./commit.sh` (or `commit.bat`): it reads `VERSION.md`, commits, and tags `vYY.MM.DD`
 5. `git push origin main --tags`
+
+## Versioning
+
+This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
 ## License
 
