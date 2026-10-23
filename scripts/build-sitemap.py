@@ -6,6 +6,9 @@ The page list is PAGES below; each page's <lastmod> is the date of the last git 
 touched its source file (left out if the file has no history yet). URLs always use the site's
 production address, from CNAME. The HTML page reuses the Boring Legal Stuff hub as its layout.
 
+It then runs build-discord-embeds.py, so every page's Discord preview (the sitemap page's
+included) is current.
+
 Copyright (c) 2026 Stux.Group. All rights reserved. Stux.Digital is operated by Stux Group Ltd.
 """
 import html
@@ -86,6 +89,14 @@ def main():
     (ROOT / "sitemap" / "index.html").write_text(build_html(title), encoding="utf-8", newline="\n")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8", newline="\n")
     print(f"Wrote sitemap.xml, sitemap/index.html and robots.txt for {BASE_URL} ({len(PAGES)} pages)")
+    # Every page's Discord preview, including the sitemap page just written.
+    import importlib.util
+    import sys
+    sys.dont_write_bytecode = True  # no __pycache__ in the site
+    spec = importlib.util.spec_from_file_location("build_discord_embeds", Path(__file__).resolve().parent / "build-discord-embeds.py")
+    embeds = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(embeds)
+    embeds.main([])
 
 
 if __name__ == "__main__":
