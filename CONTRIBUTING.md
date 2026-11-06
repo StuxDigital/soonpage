@@ -2,9 +2,9 @@
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.digital/logo-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.digital/logo-dark.png"><img src="https://global.media.stux.digital/logo-dark.png" height="80" alt="Stux.Digital Logo"></picture>
 </p>
 
-# Contributing to soonpage
+# Contributing to Stux.Digital Soonpage
 
-`soonpage` is the Stux.Digital "launching soon" placeholder page at [soonpage.stux.digital](https://soonpage.stux.digital), part of the
+Stux.Digital Soonpage (`soonpage`) is the Stux.Digital "launching soon" placeholder page at [soonpage.stux.digital](https://soonpage.stux.digital), part of the
 Stux.Group Brand of Companies. The repository isn't open to public pull requests, and it isn't
 licensed for reuse (see [LICENSE](LICENSE)). This document is for anyone with write access.
 
@@ -33,9 +33,10 @@ the page exactly as production does.
   `--accent #38bdf8`; light `--bg #f3f8fc`, `--accent #0369a1`), the browser window
   (`.browser`), the background path and lightbulb (`.bg`), and the progress steps (`.steps`, each
   `step--done`, `step--current` or `step--next`). Shared behaviour is in `assets/js/site.js`.
-- **The Stux.Digital pages share this kit**: `clientpage`, `soonpage` and `maintenancepage` use
-  the same stylesheet and scripts with their own copy and steps. Keep a change to the kit in step
-  across all three.
+- **The Stux.Digital pages share this kit**: Stux.Digital Clientpage, Soonpage and Maintenancepage
+  use the same `site.css`, `site.js` and site banners, with their own copy and steps. Keep a change
+  to the kit in step across all three. Their head-tag scripts, tests and icon paths differ, so
+  follow each repo's own sections below for those.
 - The address bar shows the real host and path (`data-current-host`, `data-current-path`), since
   a placeholder page is often served on someone else's domain.
 - Theme: the `<head>` script sets `<html data-theme>` before paint from `localStorage`

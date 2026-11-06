@@ -5,6 +5,13 @@ All notable changes to soonpage are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.06
+
+### Changed
+
+- `README.md` and `CONTRIBUTING.md` use the full name, Stux.Digital Soonpage
+- `CONTRIBUTING.md` says exactly what the three Stux.Digital pages share (`site.css`, `site.js` and the site banners) and that their head-tag scripts, tests and icon paths differ
+
 ## v26.10.26
 
 ### Security
